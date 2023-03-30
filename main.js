@@ -50,19 +50,19 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 // avatar
-const jeffTexture = new THREE.TextureLoader().load('./assets/img/img.jpeg');
+const avatarTexture = new THREE.TextureLoader().load('./assets/img/img.jpeg');
 
-const jeff = new THREE.Mesh(
+const avatar = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
-    new THREE.MeshBasicMaterial({ map: jeffTexture })
+    new THREE.MeshBasicMaterial({ map: avatarTexture })
 )
 
-scene.add(jeff);
+scene.add(avatar);
 
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
-    jeff.rotation.x += 0.01;
-    jeff.rotation.y += 0.01;
+    avatar.rotation.x += 0.01;
+    avatar.rotation.y += 0.01;
 
     // camera.position.z = t * -0.001;
     camera.position.x = t * -0.0002;
